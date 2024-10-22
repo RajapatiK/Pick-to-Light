@@ -6,8 +6,6 @@
 //#include "eeprom.h"
 #include "can.h"
 #include "uart.h"
-#include "clcd.h"
-
 
 unsigned char flag = 0, flag_2 = 1, ch;
 unsigned char j, a = 0, b = 0;
@@ -23,7 +21,6 @@ void init_config(void)
     GIE = 1;
     init_can();
     init_uart();
-    init_clcd();
 }
 
 void delay(unsigned short factor) 
